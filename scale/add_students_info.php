@@ -1,131 +1,206 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+    <title></title>
+    <style>
+        form {
+            background-color: white;
+            border: 1px solid #005caa;
+            border-radius: 5px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            margin-top: 50px;
+            height: 600px;
+            overflow: auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            table-layout: fixed;
+        }
+        td, th {
+            border: 1px solid #005caa;
+            padding: 10px;
+            text-align: left;
+            word-wrap: break-word;
+        }
+        th {
+            background-color: #005caa;
+            color: white;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #005caa;
+            margin-bottom: 10px;
+        }
+        input[type="button"], input[type="submit"] {
+            background-color: #005caa;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="button"]:hover, input[type="submit"]:hover {
+            background-color: #003d74;
+        }
+        a {
+            color: #005caa;
+            text-decoration: none;
+            border: 1px solid #005caa;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        a:hover {
+            background-color: #005caa;
+            color: white;
+        }
+		img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%; /* Make the image responsive */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 20px; /* Added some margin at the bottom */
+        }
+    </style>
 </head>
 <body>
 <form action="add_students_info_process.php" method="POST">
-	<table border='1'>
-			<td>LASTNAME</td>
+    <img src="https://khub.clc.pshs.edu.ph/pluginfile.php/1/theme_moove/logo/1705109989/moodle-lg.png" alt="PSHS Logo" style="display: block; margin: 0 auto; width: 200px;">
+    <table>
+        		<tr>
+			<th>LASTNAME</th>
 			<td><input type="text" name="txtLname"></td>
 		</tr>
 		<tr>
-			<td>FIRSTNAME</td>
+			<th>FIRSTNAME</th>
 			<td><input type="text" name="txtFname"></td>
 		</tr>
 		<tr>
-			<td>MIDDLENAME</td>
+			<th>MIDDLENAME</th>
 			<td><input type="text" name="txtMname"></td>
 		</tr>
 		<tr>
-			<td>BATCH</td>
+			<th>BATCH</th>
 			<td><input type="text" name="txtBatch"></td>
 		</tr>
 		<tr>
-			<td>GRADE</td>
+			<th>GRADE</th>
 			<td><input type="text" name="txtGrade"></td>
 		</tr>
 		<tr>
-			<td>PSHSCLUB1</td>
+			<th>SECTION</th>
+			<td><input type="text" name="txtSection"></td>
+		</tr>
+		<tr>
+			<th>PSHSCLUB1</th>
 			<td><input type="text" name="txtPSHSClub1"></td>
 		</tr>
 		<tr>
-			<td>PSHSCLUBPOSITION1</td>
+			<th>PSHSCLUBPOSITION1</th>
 			<td><input type="text" name="txtPSHSClubPos1"></td>
 		</tr>
 		<tr>
-			<td>PSHSCLUBLENGTH1</td>
+			<th>PSHSCLUBLENGTH1</th>
 			<td><input type="text" name="txtPSHSClubLength1"></td>
 		</tr>
 		<tr>
-			<td>PSHSCLUB2</td>
+			<th>PSHSCLUB2</th>
 			<td><input type="text" name="txtPSHSClub2"></td>
 		</tr>
 		<tr>
-			<td>PSHSCLUBPOSITION2</td>
+			<th>PSHSCLUBPOSITION2</th>
 			<td><input type="text" name="txtPSHSClubPos2"></td>
 		</tr>
 		<tr>
-			<td>PSHSCLUBLENGTH2</td>
+			<th>PSHSCLUBLENGTH2</th>
 			<td><input type="text" name="txtPSHSClubLength2"></td>
 		</tr>
 		<tr>
-			<td>PSHSCLUB3</td>
+			<th>PSHSCLUB3</th>
 			<td><input type="text" name="txtPSHSClub3"></td>
 		</tr>
 		<tr>
-			<td>PSHSCLUBPOSITION3</td>
+			<th>PSHSCLUBPOSITION3</th>
 			<td><input type="text" name="txtPSHSClubPos3"></td>
 		</tr>
 		<tr>
-			<td>PSHSCLUBLENGTH3</td>
+			<th>PSHSCLUBLENGTH3</th>
 			<td><input type="text" name="txtPSHSClubLength3"></td>
 		</tr>
 		<tr>
-			<td>OUTSIDECLUB1</td>
+			<th>OUTSIDECLUB1</th>
 			<td><input type="text" name="txtOutsideClub1"></td>
 		</tr>
 		<tr>
-			<td>OUTSIDECLUBPOSITION1</td>
+			<th>OUTSIDECLUBPOSITION1</th>
 			<td><input type="text" name="txtOutsideClubPos1"></td>
 		</tr>
 		<tr>
-			<td>OUTSIDECLUBLENGTH1</td>
+			<th>OUTSIDECLUBLENGTH1</th>
 			<td><input type="text" name="txtOutsideClubLength1"></td>
 		</tr>
 		<tr>
-			<td>OUTSIDECLUB2</td>
+			<th>OUTSIDECLUB2</th>
 			<td><input type="text" name="txtOutsideClub2"></td>
 		</tr>
 		<tr>
-			<td>OUTSIDECLUBPOSITION2</td>
+			<th>OUTSIDECLUBPOSITION2</th>
 			<td><input type="text" name="txtOutsideClubPos2"></td>
 		</tr>
 		<tr>
-			<td>OUTSIDECLUBLENGTH2</td>
+			<th>OUTSIDECLUBLENGTH2</th>
 			<td><input type="text" name="txtOutsideClubLength2"></td>
 		</tr>
 		<tr>
-			<td>OUTSIDECLUB3</td>
+			<th>OUTSIDECLUB3</th>
 			<td><input type="text" name="txtOutsideClub3"></td>
 		</tr>
 		<tr>
-			<td>OUTSIDECLUBPOSITION3</td>
+			<th>OUTSIDECLUBPOSITION3</th>
 			<td><input type="text" name="txtOutsideClubPos3"></td>
 		</tr>
 		<tr>
-			<td>OUTSIDECLUBLENGTH3</td>
+			<th>OUTSIDECLUBLENGTH3</th>
 			<td><input type="text" name="txtOutsideClubLength3"></td>
 		</tr>
 		<tr>
-			<td>SPORTS</td>
+			<th>SPORTS</th>
 			<td><input type="text" name="txtSports"></td>
 		</tr>
 		<tr>
-			<td>INSTRUMENTS</td>
+			<th>INSTRUMENTS</th>
 			<td><input type="text" name="txtInstruments"></td>
 		</tr>
 		<tr>
-			<td>ARTS</td>
+			<th>ARTS</th>
 			<td><input type="text" name="txtArts"></td>
 		</tr>
 		<tr>
-			<td>HOBBIES</td>
+			<th>HOBBIES</th>
 			<td><input type="text" name="txtHobbies"></td>
 		</tr>
 		<tr>
-			<td>INTERESTS</td>
+			<th>INTERESTS</th>
 			<td><input type="text" name="txtInterests"></td>
 		</tr>
 		<tr>
-			<td>ACTIVITIESSTARTED</td>
+			<th>ACTIVITIESSTARTED</th>
 			<td><input type="text" name="txtActivities"></td>
 		</tr>
 		<tr>
 			<td><a href="view_students.php"><input type="button" value="BACK"></a></td>
 			<td><input type="SUBMIT"></td>
 		</tr>
-	</table>
-
-
+    </table>
+</form>
 </body>
 </html>
