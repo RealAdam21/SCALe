@@ -1,7 +1,8 @@
-// Login -> dashboard -> forms or people -> view or edit forms//
+// Login -> dashboard -> forms or people -> view or edit forms
 //Scale - main stuff; tested and works
 //Test- Broken; Troubleshooting in progress
 // Views- Folder ng laravel stuff; moved na contents to the scale folder
+
 // Errors:
 //1. Di nareread mga ibang variables nung tinry ko yung new stuff na may CSS sa form 1
 //2. Nag add ako ng button that adds rows and nagkaproblema ako since it like stores them in arrays
