@@ -1,0 +1,35 @@
+body{
+    font-family: 'Poppins';
+}
+ #pshs{
+    border-left:none; border-right:none; border-top:none;
+   }
+ form {
+     background-color: white;
+     border: 1px solid black;
+     border-radius: 5px;
+      padding: 20px;
+       max-width: 800px;
+      margin: 0 auto;
+     margin-top: 50px;
+      height: 600px;
+       overflow: auto;
+   }
+   header{
+       text-align:center;
+   }
+   th{
+    font-size: 15px;
+   }
+   #toptags{
+    border-left:none; border-right:none; border-top:none;
+   }
+   #eminem{
+    border-left:none; border-right:none; border-top:none; width:250px; text-align: center; margin-right:50px;
+   }
+   #drake{
+    border-left:none; border-right:none; border-top:none; width:150px; text-align: center;
+   }
+   #kendrick{
+    border-left:none; border-right:none; border-top:none; width:275px; text-align: center;
+   }

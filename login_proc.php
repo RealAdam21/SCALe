@@ -1,6 +1,8 @@
 <?php
 session_start();
 include 'connect.php';
+// Example of setting $_SESSION["level"] after successful login
+$_SESSION["level"] = $user_level_from_database; // Assign the appropriate user level here
 
 $email = $_POST['txtEmail'];
 $pword = $_POST['txtPword'];

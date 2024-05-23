@@ -17,6 +17,6 @@ if ($conn->query($sql) === TRUE) {
 
 <script>
 
-  location.replace("view_form1.php")
+  location.replace("view_form1_students.php")
 
 </script>

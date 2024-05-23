@@ -29,5 +29,5 @@ $conn->close();
 ?>
 
 <script>
-    location.replace("view_form2.php");
+    location.replace("view_form2_student.php");
 </script>

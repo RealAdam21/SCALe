@@ -1,3 +1,43 @@
+<?php
+session_start(); // Ensure session is started
+include 'connect.php'; // Include database connection
+
+// Check if $_SESSION['id'] is set and not empty
+if (!isset($_SESSION['id']) || empty($_SESSION['id'])) {
+    die("Session ID not set.");
+}
+
+$id = $_SESSION['id'];
+
+// Fetch current user's information including first name and u_level
+$sqlCurrentUser = "SELECT users_info_tbl.*, users_tbl.u_fname, users_tbl.u_level 
+                   FROM users_info_tbl 
+                   INNER JOIN users_tbl ON users_info_tbl.u_id = users_tbl.u_id 
+                   WHERE users_info_tbl.u_id = $id";
+$resultCurrentUser = $conn->query($sqlCurrentUser);
+
+if (!$resultCurrentUser) {
+    die("Error fetching user information: " . $conn->error);
+}
+
+if ($resultCurrentUser->num_rows > 0) {
+    $rowCurrentUser = $resultCurrentUser->fetch_assoc();
+    $section = $rowCurrentUser['ui_section'];
+    $position = $rowCurrentUser['ui_position'];
+    $firstName = $rowCurrentUser['u_fname'];
+    $userLevel = $rowCurrentUser['u_level']; // Fetch the user's level
+} else {
+    die("User not found.");
+}
+
+// Fetch advisers from the database
+$sqlAdvisers = "SELECT u_lname, u_fname, u_mname FROM users_tbl WHERE u_level = 2";
+$resultAdvisers = $conn->query($sqlAdvisers);
+
+if (!$resultAdvisers) {
+    die("Error fetching advisers: " . $conn->error);
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,14 +74,6 @@
     </style>
 </head>
 <body>
-    <?php 
-    include 'connect.php'; // Include database connection
-    include 'links.php'; 
-
-    // Fetch advisers from the database
-    $sqlAdvisers = "SELECT u_lname, u_fname, u_mname FROM users_tbl WHERE u_level = 2";
-    $resultAdvisers = $conn->query($sqlAdvisers);
-    ?>
     <form action="insert_form2_proc.php" method="POST">
         <table border="1">
             <tr>
@@ -103,10 +135,9 @@
             </tr>
             <tr>
                 <td><input type="submit" value="SUBMIT"></td>
-                <td><a href="view_form2.php"><input type="button" value="BACK"></a></td>
+                <td><a href="view_form2_student.php"><input type="button" value="BACK"></a></td>
             </tr>
         </table>
     </form>
 </body>
 </html>
-

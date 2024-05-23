@@ -1,0 +1,50 @@
+
+body {
+    font-family: 'Poppins';
+}
+form {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 600px;
+    overflow: auto;
+}
+header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;	
+}   
+input {
+    border-right: none; border-left: none; border-top:none; text-align: center;
+}
+#Grade{
+    float: right;
+}
+
+#club{ 
+    border: none;
+    padding:3px;
+}
+
+td input, td button {
+    box-sizing:border-box;
+    display:block;
+    width:100%;
+    }
+    
+    input[type="button"], input[type="submit"] {
+
+        color: black;
+        border: none;
+        padding: 10px;
+        border-radius: 1px;
+        cursor: pointer;
+    }
+
+    #submit{
+        float:right;
+    }
